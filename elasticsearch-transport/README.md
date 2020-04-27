@@ -85,6 +85,7 @@ Full documentation is available at <http://rubydoc.info/gems/elasticsearch-trans
 * [Logging](#logging)
 * [Custom HTTP Headers](#custom-http-headers)
 * [Identifying running tasks with X-Opaque-Id](#identifying-running-tasks-with-x-opaque-id)
+* [Observability](#observability)
 * [Setting Timeouts](#setting-timeouts)
 * [Randomizing Hosts](#randomizing-hosts)
 * [Retrying on Failures](#retrying-on-failures)
@@ -290,6 +291,10 @@ The request will include the following HTTP Header:
 ```
 X-Opaque-Id: eu-west1_123456
 ```
+
+### Observability
+
+You can use the [official Elastic APM agent for Ruby](https://github.com/elastic/apm-agent-ruby) which integrates seamlessly with this client for observability.
 
 ### Setting Timeouts
 
