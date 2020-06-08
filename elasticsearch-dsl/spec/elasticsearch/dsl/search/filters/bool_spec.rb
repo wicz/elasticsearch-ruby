@@ -183,4 +183,15 @@ describe Elasticsearch::DSL::Search::Filters::Bool do
                                            should: [{ term: { foo: 'bor' } }] })
     end
   end
+
+  context 'when options defined' do
+
+    before do
+      search.minimum_should_match 1
+    end
+
+    it 'updates the query definition' do
+      expect(search.to_hash).to eq(bool: { minimum_should_match: 1 })
+    end
+  end
 end
